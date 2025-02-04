@@ -54,15 +54,10 @@ function App() {
       <ColorDisplay colorDisplayed={colorDisplayed} />
       <ColorOptions handleGuess={handleGuess} colors={colors} />
 
-      {/* {showOverlay && (
-        <div className="overlay" onClick={() => setShowOverlay(false)}>
-          <div className="overlay-content">
-            <p>Try Again!</p>
-            <button onClick={() => setShowOverlay(false)}>Close</button>
-          </div>
-        </div>
-      )} */}
-      <div className={`overlay ${showOverlay ? "active" : ""}`}>
+      <div
+        className={`overlay ${showOverlay ? "active" : ""}`}
+        onClick={() => setShowOverlay(false)}
+      >
         <div className="overlay-content">
           <p>Try Again!</p>
           <button onClick={() => setShowOverlay(false)}>Close</button>
